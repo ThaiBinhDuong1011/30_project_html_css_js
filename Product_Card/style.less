@@ -1,0 +1,135 @@
+@primary-color: #4daf54;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins";
+    height: 100%;
+    background: linear-gradient(to right, #4daf54, #3d8880);
+}
+
+.card {
+    margin: 120px auto;
+    width: 300px;
+    height: 400px;
+    color: white;
+    background-color: #272d40;
+    border-radius: 15px;
+    padding: 20px;
+
+    &:hover .card__img {
+        transform: translateY(-90px) rotate(-20deg);
+    }
+
+    &:hover .card__title, &:hover .card__price {
+        transform: translateY(-72px);
+    }
+
+    &:hover .card__body {
+        margin-top: 70px;
+        opacity: 100;
+        visibility: visible;
+        transform: translateY(-72px);
+    }
+}
+
+.card__header {
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__img {
+    width: 90%;
+    transition: ease 0.5s;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__title, .card__price {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    transition: ease 0.5s;
+}
+
+.card__title {
+    color: @primary-color;
+    margin-bottom: 1rem;
+}
+
+.card__body {
+    align-items: center;
+    margin-top: 150px;
+    opacity: 0;
+    visibility: hidden;
+    transition: ease 0.5s;
+    transition-delay: 0.2s;
+}
+
+.card__size, .card__color, .card__action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    h3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-right: 10px;
+    }
+}
+
+.card__size {
+    span {
+        padding: 3px 6px;
+        margin-left: 5px;
+        border-radius: 5px;
+        color: black;
+        background-color: #dadada;
+    }
+}
+
+.card__color {
+    span {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+
+    .card__color--green {
+        background-color: green;
+    }
+
+    .card__color--red {
+        background-color: red;
+    }
+
+    .card__color--black {
+        background-color: black;
+    }
+}
+
+.card__action {
+    button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-weight: bold;
+        color: white;
+        background-color: @primary-color;
+        transition: ease 0.3s;
+
+        &:hover {
+            transform: scale(0.9);
+        }
+    }
+}
