@@ -1,0 +1,193 @@
+@text-color-hot: rgb(249, 136, 102);
+@text-color-cold: rgb(43, 174, 102);
+@background-color-hot: rgba(255, 242, 215, 0.8);
+@background-color-cold: rgba(0, 32, 63, 0.8);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+		url(./images/cold.jpg) no-repeat center/cover;
+}
+
+.hot {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+		url(./images/hot.jpg) no-repeat center/cover;
+
+    .weather {
+        background: url(./images/hot.jpg) no-repeat center/cover;
+
+        .input {
+            color: @text-color-hot;
+            background-color: @background-color-hot;
+        }
+    
+        .content {
+            color: @text-color-hot;
+    
+            .info {
+                background-color: @background-color-hot;
+            }
+    
+            .temperature {
+                background-color: @background-color-hot;
+            }
+    
+            .description {
+                background-color: @background-color-hot;
+            }
+        }
+        
+        .no-content {
+             color: @text-color-hot;
+            background-color: @background-color-hot;
+        }
+
+    }
+}
+
+.cold {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+		url(./images/cold.jpg) no-repeat center/cover;
+
+    .weather {
+        background: url(./images/cold.jpg) no-repeat center/cover;
+
+        .input {
+            color: @text-color-cold;
+            background-color: @background-color-cold;
+        }
+    
+        .content {
+            color: @text-color-cold;
+    
+            .info {
+                background-color: @background-color-cold;
+            }
+    
+            .temperature {
+                background-color: @background-color-cold;
+            }
+    
+            .description {
+                background-color: @background-color-cold;
+            }
+        }
+        
+        .no-content {
+             color: @text-color-cold;
+            background-color: @background-color-cold;
+        }
+
+    }
+}
+
+.weather {
+    min-width: 350px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.input {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 0 15px 0 15px;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.2);
+    font-size: 19px;
+    margin-bottom: 40px;
+    transition: 0.3s;
+
+    &:focus {
+        background-color: #FAEBEF;
+        border-radius: 15px 0 15px 0;
+    }
+}
+
+.content {
+    .info {
+        font-size: 40px;
+        text-shadow: 1px 1px #3338;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        white-space: nowrap;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+        box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.6);
+
+        .time {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+    }
+
+    .temperature {
+        align-items: center;
+        font-size: 70px;
+        font-weight: bold;
+        padding: 20px 0;
+        margin: 40px 40px 20px 40px;
+        border-radius: 10px;
+        text-shadow: 3px 3px rgba(0, 0, 0, 0.6);
+        box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.6);
+
+        sup {
+            vertical-align: super;
+        }
+    }
+
+    .description {
+        padding-bottom: 5px;
+        margin-top: 40px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.6);
+
+        .short-desc {
+            font-size: 40px;
+            font-weight: bold;
+            text-shadow: 3px 3px rgba(0, 0, 0, 0.4);
+            margin-bottom: 40px;
+        }
+
+        .more-desc {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            & > div {
+                font-size: 16px;
+                font-weight: 700;
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+.no-content {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 20px;
+    margin: 0 20px;
+    width: 350px;
+    height: 400px;
+    font-size: 50px;
+}
+
+.hide {
+    display: none;
+}
