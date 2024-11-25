@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+section {
+  height: 100vh;
+}
+.left-to-right {
+  transform: translateX(-150%);
+}
+.left-to-right.start {
+  transform: translateX(0);
+  transition: 1s ease-in;
+}
+.right-to-left {
+  transform: translateX(150%);
+}
+.right-to-left.start {
+  transform: translateX(0);
+  transition: 1s ease-in;
+}
+.zoom {
+  transform: scale(0);
+}
+.zoom.start {
+  transform: scale(1);
+  transition: 1s ease-in;
+}
+#home {
+  background: linear-gradient(to right, #4daf54, #3d8880);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 50px;
+}
+#home h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+#home p {
+  font-size: 20px;
+}
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#about .box {
+  background-color: #242628;
+  width: 500px;
+  margin: 0 20px;
+  padding: 20px;
+  color: #fff;
+  border-radius: 10px;
+}
+#about .box h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+#team {
+  background: linear-gradient(180deg, #017c2c 50%, #fff 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#team .person {
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 0 20px;
+  padding: 20px;
+  background-color: #fff;
+}
+#team .person h1 {
+  color: #017c2c;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
